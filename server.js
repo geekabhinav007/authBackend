@@ -15,10 +15,14 @@ require('./config/database').connect()
 //route importing and mounting
 const user = require('./routes/user')
 
-app.use('/api/v1', user)
+app.use('/api', user)
+
+app.get("/", (req, res) => {
+    res.send("Welcom To User Authentication API Backend.");
+});
 
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log("Server Started")
-   
+
 })
