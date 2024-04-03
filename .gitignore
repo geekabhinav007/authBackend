@@ -4,3 +4,8 @@ node_modules/
 # Ignore env files
 .env
 .env.*
+
+
+# instruction for Integration
+
+integrationInstruction.md

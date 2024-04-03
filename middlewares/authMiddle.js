@@ -16,14 +16,11 @@ exports.auth = (req, res, next) => {
             });
         }
 
-        // Manual function to remove Bearer from token
+        // Manual function to remove Bearer prefix from token
         const extractTokenFromHeader = (authorizationHeader) => {
-            // Check if the header starts with "Bearer"
             if (authorizationHeader && authorizationHeader.startsWith("Bearer ")) {
-                // Remove the "Bearer " prefix
                 return authorizationHeader.slice(7);
             }
-            // If the header doesn't start with "Bearer", return it as is
             return authorizationHeader;
         };
 
